@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Conectar Launchpad com Web MIDI API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        select,
+        /*
+        button {
+            font-size: 1rem;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        */
+
+        #log {
+            white-space: pre-wrap;
+            background: #eee;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+        }
+
+        .teclado {
+            display: grid;
+            grid-template-columns: repeat(7, 40px);
+            gap: 10px;
+            width: max-content;
+            margin: 20px auto;
+            justify-content: center;
+        }
+
+        .teclado button {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #eee;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .teclado button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Conectar Launchpad via Web MIDI API</h1>
+
+    <button id="connect-btn">Conectar a dispositivos MIDI</button><br />
+
+    <label for="midi-out-select">Escolha a saída MIDI:</label><br />
+    <select id="midi-out-select"></select><br />
+
+    <button id="send-led-btn" disabled>Acender LED no Launchpad</button>
+    <button id="apagar" disabled>ApagarLED no Launchpad</button>
+
+    <h2>Log</h2>
+    <div id="log"></div>
+
+    <script src="/js/letras.js"></script>
+    <script src="/js/letras-desativadas.js"></script>
+    <script src="/js/constantes.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
