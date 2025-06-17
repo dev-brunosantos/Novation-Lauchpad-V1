@@ -70,6 +70,18 @@ button {
     background-color: #dadada;
 }
 
+.container-animacao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .container-animacao button {
+    width: 38.5%;
+} */
+
 @media screen and (min-width: 600px) {
     body {
         display: flex;
@@ -90,5 +102,17 @@ button {
     .container-select,
     .container-log {
         width: 450px;
+    }
+
+    .container-animacao {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-animacao button {
+        width: 38.5%;
     }
 }
